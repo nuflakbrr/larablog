@@ -46,7 +46,7 @@
                         <div class="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
                             @foreach ($posts as $post)
                                 <div class="col-span-2">
-                                    <div class="h-full w-full rounded bg-slate-700">
+                                    <div class="h-full w-full rounded bg-slate-800">
                                         <article class="px-4 py-5">
                                             <div>
                                                 {{-- Title --}}
