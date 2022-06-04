@@ -21,7 +21,7 @@
     {{-- Import Navbar End --}}
 
     {{-- Section Content Start --}}
-    <section class="bg-gray-900">
+    <section class="bg-gray-900 pt-20">
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="container">
                 <div class="py-6">

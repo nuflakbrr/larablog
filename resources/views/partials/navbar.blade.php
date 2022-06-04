@@ -1,5 +1,5 @@
 <nav>
-    <div class="bg-gray-900">
+    <div class="bg-gray-900 fixed z-20 w-full">
         <div x-data="{ isOpen: false }" class="max-w-7xl mx-auto flex justify-between px-4 py-6">
             <div class="flex items-center">
                 <a href="/" class="text-2xl font-bold text-white">LaraBlog</a>
@@ -28,7 +28,7 @@
                 {{-- mobile navbar --}}
                 <div class="mobile-navbar">
                     {{-- navbar wrapper --}}
-                    <div class="fixed left-0 w-full h-48 p-4 bg-white rounded-lg shadow-xl top-16" x-show="isOpen"
+                    <div class="fixed left-0 w-full h-48 p-4 bg-white rounded-lg shadow-xl top-16 z-20" x-show="isOpen"
                         @click.away=" isOpen = false">
                         <div class="flex flex-col">
                             <a href="/blog"

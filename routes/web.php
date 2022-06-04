@@ -65,6 +65,18 @@ Route::get('/blog', function () {
             "date" => "2020-01-01",
             "body" => "Body blog post 6"
         ],
+        [
+            "title" => "Blog post 7",
+            "slug" => "blog-post-7",
+            "date" => "2020-01-01",
+            "body" => "Body blog post 7"
+        ],
+        [
+            "title" => "Blog post 8",
+            "slug" => "blog-post-8",
+            "date" => "2020-01-01",
+            "body" => "Body blog post 8"
+        ],
     ];
 
     return view('blog', [
@@ -112,6 +124,18 @@ Route::get('/blog/{slug}', function ($slug) {
             "slug" => "blog-post-6",
             "date" => "2020-01-01",
             "body" => "Body blog post 6"
+        ],
+        [
+            "title" => "Blog post 7",
+            "slug" => "blog-post-7",
+            "date" => "2020-01-01",
+            "body" => "Body blog post 7"
+        ],
+        [
+            "title" => "Blog post 8",
+            "slug" => "blog-post-8",
+            "date" => "2020-01-01",
+            "body" => "Body blog post 8"
         ],
     ];
 
