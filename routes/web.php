@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,10 @@ Route::get('/snippets', function () {
         'title' => 'Cuplikan Kode -',
     ]);
 });
+
+Route::get('/tags', [CategoryController::class, 'index']);
+
+Route::get('/tags/{category:slug}', [CategoryController::class, 'singleCategory']);
 
 Route::get('/project', function () {
     return view('project', [
