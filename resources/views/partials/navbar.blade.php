@@ -19,6 +19,8 @@
                         class="text-base hover:text-white {{ $path === '/blog' ? 'text-white' : 'text-gray-400' }}">Catatan</a>
                     <a href="/snippets"
                         class="text-base hover:text-white {{ $path === '/snippets' ? 'text-white' : 'text-gray-400' }}">Cuplikan</a>
+                    <a href="/tags"
+                        class="text-base hover:text-white {{ $path === '/tags' ? 'text-white' : 'text-gray-400' }}">Kategori</a>
                     <a href="/project"
                         class="text-base hover:text-white {{ $path === '/project' ? 'text-white' : 'text-gray-400' }}">Portofolio</a>
                     <a href="/about"
@@ -35,6 +37,8 @@
                                 class="py-2 text-base hover:text-gray-500 {{ $path === '/blog' ? 'text-black' : 'text-gray-500' }}">Catatan</a>
                             <a href="/snippets"
                                 class="py-2 text-base hover:text-gray-500 {{ $path === '/snippets' ? 'text-black' : 'text-gray-500' }}">Cuplikan</a>
+                            <a href="/tags"
+                                class="py-2 text-base hover:text-gray-500 {{ $path === '/tags' ? 'text-white' : 'text-gray-400' }}">Kategori</a>
                             <a href="/project"
                                 class="py-2 text-base hover:text-gray-500 {{ $path === '/project' ? 'text-black' : 'text-gray-500' }}">Portofolio</a>
                             <a href="/about"
