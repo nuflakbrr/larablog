@@ -14,7 +14,7 @@
                 {{-- Author --}}
                 <div class="pb-2 border-b-2 border-gray-600">
                     <div class="w-full px-4 py-5">
-                        <h4 class="mb-1 text-lg font-bold uppercase text-sky-500">
+                        <h4 class="mb-1 text-lg font-bold uppercase text-white">
                             Penulis
                         </h4>
                         <h2 class="mb-1 max-w-md text-xl font-bold capitalize text-white lg:text-xl">
@@ -29,16 +29,17 @@
                 {{-- Author End --}}
 
                 {{-- Category --}}
-                {{-- <div class="pb-2 border-b-2 border-gray-600">
+                <div class="pb-2 border-b-2 border-gray-600">
                     <div class="w-full px-4 py-5">
-                        <h4 class="mb-1 text-lg font-bold uppercase text-sky-500">
+                        <h4 class="mb-1 text-lg font-bold uppercase text-white">
                             Kategori
                         </h4>
-                        <h2 class="mb-1 max-w-md text-xl font-bold capitalize text-white lg:text-xl">
-                            {{ $post->category }}
-                        </h2>
+                        <a href="/tags/{{ $post->category->slug }}"
+                            class="max-w-6xl text-base font-medium text-slate-500 hover:text-sky-500 lg:text-sm">
+                            {{ $post->category->name }}
+                        </a>
                     </div>
-                </div> --}}
+                </div>
                 {{-- Category End --}}
 
             </div>

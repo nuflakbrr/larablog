@@ -71,8 +71,19 @@
                                                             </svg>
                                                         </span>
                                                         <time dateTime={{ $post->published_at }} class="text-zinc-50">
-                                                            {{ $post->date }}
+                                                            {{ $post->published_at }}
                                                         </time>
+                                                    </div>
+                                                    <div class="mt-1 flex items-center text-sm text-slate-600">
+                                                        <span class="mr-1.5 text-teal-500">
+                                                            <svg role="img" width="16" xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 512 512" fill="currentColor">
+                                                                <path
+                                                                    d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z" />
+                                                            </svg>
+                                                        </span>
+                                                        <a href="/tags/{{ $post->category->slug }}"
+                                                            class="mr-3 text-sm font-medium capitalize text-white hover:text-sky-500">{{ $post->category->name }}</a>
                                                     </div>
                                                     {{-- Date & Tag End --}}
 
@@ -93,99 +104,4 @@
         </div>
         {{-- Blog Card End --}}
     </div>
-
-    {{-- <div class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap -m-4">
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/420x260">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                        <p class="mt-1">$16.00</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/421x261">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                        <p class="mt-1">$21.15</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/422x262">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                        <p class="mt-1">$12.00</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/423x263">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                        <p class="mt-1">$18.40</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/424x264">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                        <p class="mt-1">$16.00</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/425x265">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                        <p class="mt-1">$21.15</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/427x267">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                        <p class="mt-1">$12.00</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                            src="https://dummyimage.com/428x268">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                        <p class="mt-1">$18.40</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 @endsection
