@@ -21,7 +21,7 @@ class CategoryController extends Controller
         return view('tag', [
             'path' => '/tags',
             'title' => $category->name . ' -',
-            'posts' => $category->post,
+            'posts' => $category->post->load('category'),
             'category' => $category->name
         ]);
     }
