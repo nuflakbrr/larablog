@@ -17,7 +17,7 @@
                             {{ $category }}
                         </h2>
                         <p class="max-w-6xl text-base font-medium text-slate-500 lg:text-sm">
-                            Pada halaman ini anda dapat membaca catatan berdasarkan kategori {{ $category }}.
+                            Pada halaman ini Anda dapat membaca catatan berdasarkan kategori {{ $category }}.
                         </p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                                             </svg>
                                                         </span>
                                                         <time dateTime={{ $post->published_at }} class="text-zinc-50">
-                                                            {{ $post->published_at }}
+                                                            {{ date('d F Y', strtotime($post->published_at)) }}
                                                         </time>
                                                     </div>
                                                     <div class="mt-1 flex items-center text-sm text-slate-600">
