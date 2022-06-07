@@ -29,4 +29,12 @@ class PageController extends Controller
             'title' => 'Tentang -',
         ]);
     }
+
+    public function dashboard()
+    {
+        return view('admin.dashboard', [
+            'path' => '/admin/dashboard',
+            'title' => 'Dashboard -',
+        ]);
+    }
 }
