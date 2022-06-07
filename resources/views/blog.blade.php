@@ -8,7 +8,7 @@
         <div class="grid grid-cols-8 gap-6 md:py-10 lg:py-10 xl:py-0">
             <div class="col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-2">
                 {{-- Card --}}
-                <div class="sticky top-20">
+                <div class="sticky top-20 @auth top-28 @endauth">
                     <div class="rounded-xl bg-slate-100">
                         <div class="w-full px-4 py-5">
                             <h4 class="mb-1 text-lg font-bold uppercase text-sky-500">
