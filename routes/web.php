@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +38,13 @@ Route::get('/tags/{category:slug}', [CategoryController::class, 'singleCategory'
 Route::get('/project', [PageController::class, 'project']);
 
 Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/admin/login', [LoginController::class, 'index']);
+
+Route::post('/admin/login', [LoginController::class, 'auth']);
+
+Route::get('/admin/register', [RegisterController::class, 'index']);
+
+Route::post('/admin/register', [RegisterController::class, 'store']);
+
+Route::get('/admin/dashboard', [PageController::class, 'dashboard']);
