@@ -30,17 +30,19 @@
             {{-- Blog Card --}}
             <div class="col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-6">
                 {{-- Search Input --}}
-                <div class="flex items-center">
-                    <input aria-label="Cari Artikel" type="text" placeholder="Cari Artikel"
-                        class="block w-full rounded-l-md border px-4 py-2 focus:border-sky-500 focus:ring-sky-500 border-gray-900 bg-gray-800 text-gray-100" />
-                    <span class="rounded-r-md border-t border-r border-b px-4 py-2.5 border-gray-900 bg-slate-700">
+                <form action="/blog" method="get" class="flex items-center">
+                    <input aria-label="Cari Artikel" type="text" placeholder="Cari Artikel" name="search"
+                        class="block w-full rounded-l-md border px-4 py-2 focus:border-sky-500 focus:ring-sky-500 border-gray-900 bg-gray-800 text-gray-100"
+                        value="{{ request('search') }}" />
+                    <button type="submit"
+                        class="rounded-r-md border-t border-r border-b px-4 py-2.5 border-gray-900 bg-slate-700">
                         <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                    </span>
-                </div>
+                    </button>
+                </form>
 
                 @if ($posts->count())
                     <ul>
@@ -107,6 +109,7 @@
                             </article>
                         </li>
                     </ul>
+                    {{ $posts->links('pagination::tailwind') }}
                 @else
                     <ul>
                         <li class="py-4">
@@ -116,8 +119,7 @@
                                         <div class="h-full w-full rounded bg-slate-800">
                                             <div class="px-4 py-5">
                                                 <h1 class="flex justify-center items-center mx-auto text-center text-white">
-                                                    Maaf, halaman
-                                                    ini belum memiliki postingan 😓</h1>
+                                                    Maaf, tidak dapat menemukan postingan 😓</h1>
                                             </div>
                                         </div>
                                     </div>

@@ -9,10 +9,13 @@ class PostController extends Controller
 {
     public function index()
     {
+        // Check search query
+        // dd(request('search'));
+
         return view('blog', [
             'path' => '/blog',
             'title' => 'Catatan -',
-            'posts' => Post::latest()->get()
+            'posts' => Post::latest()->filter(request(['search']))->paginate(6)->withQueryString()
         ]);
     }
 
