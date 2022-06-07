@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
@@ -45,3 +46,5 @@ Route::get('/admin/register', [RegisterController::class, 'index'])->middleware(
 Route::post('/admin/register', [RegisterController::class, 'store']);
 
 Route::get('/admin/dashboard', [PageController::class, 'dashboard'])->middleware('auth');
+
+Route::resource('/admin/my-posts', DashboardPostController::class)->middleware('auth');
