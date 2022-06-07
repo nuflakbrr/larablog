@@ -28,23 +28,20 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', [PageController::class, 'home']);
 
 Route::get('/blog', [PostController::class, 'index']);
-
 Route::get('/blog/{post:slug}', [PostController::class, 'singlePost']);
 
 Route::get('/tags', [CategoryController::class, 'index']);
-
 Route::get('/tags/{category:slug}', [CategoryController::class, 'singleCategory']);
 
 Route::get('/project', [PageController::class, 'project']);
 
 Route::get('/about', [PageController::class, 'about']);
 
-Route::get('/admin/login', [LoginController::class, 'index']);
-
+Route::get('/admin/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/admin/login', [LoginController::class, 'auth']);
+Route::post('/admin/logout', [LoginController::class, 'logout']);
 
-Route::get('/admin/register', [RegisterController::class, 'index']);
-
+Route::get('/admin/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/admin/register', [RegisterController::class, 'store']);
 
-Route::get('/admin/dashboard', [PageController::class, 'dashboard']);
+Route::get('/admin/dashboard', [PageController::class, 'dashboard'])->middleware('auth');
