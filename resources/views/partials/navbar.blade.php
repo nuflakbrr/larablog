@@ -70,7 +70,8 @@
                                     <p class="ml-2">Dashboard</p>
                                 </div>
                             </a>
-                            <a href="/admin/logout">
+                            <form action="/admin/logout" method="post">
+                                @csrf
                                 <div class="flex px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">
                                     <span class="mr-2">
                                         <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -82,9 +83,9 @@
                                         </svg>
                                     </span>
                                     |
-                                    <p class="ml-2">Logout</p>
+                                    <button type="submit" class="ml-2">Logout</button>
                                 </div>
-                            </a>
+                            </form>
                         </div>
                     </div>
                 @endauth
