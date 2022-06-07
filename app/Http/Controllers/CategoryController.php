@@ -22,7 +22,8 @@ class CategoryController extends Controller
             'path' => '/tags',
             'title' => $category->name . ' -',
             'posts' => $category->post->load('category'),
-            'category' => $category->name
+            'category' => $category->name,
+            'category_slug' => $category->slug
         ]);
     }
 }
